@@ -2,7 +2,7 @@
  * rc-datetime-picker v1.6.1
  * https://github.com/AllenWooooo/rc-datetime-picker
  *
- * (c) 2018 Allen Wu
+ * (c) 2019 Allen Wu
  * License: MIT
  */
 (function (global, factory) {
@@ -793,7 +793,8 @@ var _initialiseProps = function _initialiseProps() {
     var _selected = _this2.props.moment;
     var shouldChange = panel === minPanel;
 
-    if (_selected && !shouldChange) {
+    /*if (_selected && !shouldChange) {*/
+    if (!shouldChange) {
       if (range) {
         shouldChange = rangeAt === 'start' ? _selected.start : _selected.end;
       } else {
